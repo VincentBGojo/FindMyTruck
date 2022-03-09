@@ -1,0 +1,73 @@
+// @use 'src/styles/vars';
+
+// .page_foodtruck {
+//   display: flex;
+//   // min-width: 25rem;
+//   width: 90%;
+//   height: 35rem;
+//   border-radius: .5rem;
+//   background-color: #fff;
+//   overflow: hidden;
+//   margin: .5rem 0 0 .5rem;
+//   padding: .5rem;
+//   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+// }
+
+// .page_foodtruck:hover {
+//   transform: scale(1.01);
+//   &_content_title {
+//     color: vars.$paleblue;
+//   }
+// }
+
+// .page_foodtruck_img{
+//   width: 5rem;
+//   height:5rem;
+//   object-fit: cover;
+//   border-radius: .5rem;
+// }
+
+// .page_foodtruck_content{
+//   // width: 75%;
+//   padding: 0 .5rem;
+//   display: flex;
+//   flex-direction: column;
+//   // justify-content: center;
+//   // align-items: center;
+// }
+
+// .page_foodtruck_content_title {
+//   font-size: 1.2rem;
+// }
+
+// .page_foodtruck_content_subtitle {
+//   display: flex;
+// }
+
+// .page_foodtruck_content_category {
+//   font-size: .8rem;
+//   padding: .4rem;
+//   height: 1.5rem;
+//   border-radius: 1rem;
+//   margin-right: 1rem;
+//   text-align: center;
+//   text-transform: uppercase;
+//   background-color: vars.$retropeach;
+// }
+
+// .page_foodtruck_content_rating svg {
+//   width: 1rem;
+//   color : vars.$retroyellow;
+// }
+
+// .page_foodtruck_content_description {
+//   display: flex;
+//   align-items: center;
+//   & svg{
+//     width: 1rem;
+//     color : vars.$retroredhot;
+//     margin-right: .5rem;
+//   }
+// }
+
+

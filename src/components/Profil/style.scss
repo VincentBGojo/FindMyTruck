@@ -1,0 +1,12 @@
+.footer {
+  color: #666;
+  position: fixed;
+  bottom: 25px;
+  display: block;
+  width: 100%;
+  
+  &_list{
+    display: flex;
+    justify-content: space-around;
+  }
+}

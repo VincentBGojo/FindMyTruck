@@ -1,0 +1,31 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  // min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+
+/* custom scrollbar with nesting */
+::-webkit-scrollbar {
+  width: 20px;
+  &-track {
+    background-color: #999; /*background color of the scrollbar*/
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  &-thumb {
+    background-color: #666; /*base scrollbar cursor color*/
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+    &:hover {
+      background-color: vars.$paleblue; /*hover scrollbar cursor color*/
+    }
+  }
+  }

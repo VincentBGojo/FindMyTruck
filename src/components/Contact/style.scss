@@ -1,0 +1,98 @@
+@use '../../styles/vars';
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: .5rem;
+  margin: 5rem auto;
+  width: 70%;
+  max-width: 600px;
+  background-color: #FFF;
+  box-shadow: -3rem 3rem  vars.$palegreen, 3rem 3rem  vars.$palegreen;
+}
+
+.contact_form_title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem auto ;
+  font-weight: bold;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width:90%;
+}
+
+.field input{
+  font-size: 1rem;
+  border: none;
+  padding: 0rem 0rem .5rem 2rem;
+  border-bottom: 1px solid #666;
+}
+
+.contact_field_input:focus{
+  border-bottom: 2px solid vars.$palegreen;
+}
+
+.contact_field_input:focus::-webkit-input-placeholder { 
+  position: relative;
+  top: -1.1rem;
+  left: -1rem;
+}
+
+  .field-input-textarea {
+    padding: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;  
+    background-color: rgba(255, 255, 255, 0.75);
+    resize: none;
+    border-bottom: 1px solid #666;
+}
+
+.contact_form_button {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: .5rem;
+  border: none;
+  border-radius: .5rem;
+  margin: 1rem auto;
+  width:90%;
+  background-color: vars.$palegreen;
+  color: #FFF;
+}
+
+
+
+// .image{
+// position: absolute;
+// border-radius: 50px;
+// z-index: -1;
+// opacity: 0.8;
+// width: 80%
+// }
+// .contact{
+//   position: absolute;
+//   top : 500px;
+//   right : 100px;
+//   background-color: rgba(102, 102, 102, 0.50);
+//   // background: url(https://iloveshoplifting.files.wordpress.com/2011/02/img_3430.jpg) no-repeat  top ; 
+//   width: 50%;
+//   height: 50vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 20px;
+
+// }
+
+

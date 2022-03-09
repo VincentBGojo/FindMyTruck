@@ -1,0 +1,27 @@
+@use '../../styles/vars';
+
+
+
+.legals_box {
+  overflow: auto;
+  width: 90%;
+  max-width: 800px;
+  height: 60vh;
+  // display: flex;
+  // flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: .5rem;
+  margin: 5rem auto;
+  // width: 50%;
+  background-color: #FFF;
+  box-shadow: -3rem 3rem  vars.$darkgreen;
+}
+
+.legals_title {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem auto ;
+  font-weight: bold;
+}

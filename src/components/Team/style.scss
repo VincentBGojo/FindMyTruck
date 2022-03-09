@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+.team {
+  font-family: 'Varela Round', sans-serif;
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 3rem;
+}
+
+
+.team_card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  transition: all 2s;
+  &:hover {
+    .team_card_text {
+      position: relative;
+      bottom: 40px;
+      opacity : 1;
+    }
+    #anaglyph_txt {
+      position: relative;
+      bottom: 76px;
+      opacity : 1;
+    }
+    #oakley_txt {
+      position: relative;
+      bottom: 80px;
+      opacity : 1;
+    }
+    
+    .team_card_img{
+      transform: scale(1.1);
+      bottom: 47px;
+      // TEST: Shadow behing a clear png - CSS part
+      -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.3));
+      filter: url(#drop-shadow);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+      filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+      transition: 0.3s ease-in-out;
+    }
+    .team_card_img_bonus {
+      z-index: 5;
+      opacity: 1;  
+      display: block;      
+      position: relative;
+      transition: .4s ease-in;
+    }
+    #anaglyph_img {
+      bottom: 16.1rem;
+      width: 8rem;
+    }
+    #oakley_img {
+      bottom: 16.1rem;
+      width: 8rem;
+    }
+  }
+}
+
+@keyframes pop_2 {
+  0%   { transform: scale(1,1)    translateY(0); }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.9,1.1) translateY(-50px); }
+  50%  { transform: scale(1,1)    translateY(0); }
+  100% { transform: scale(1,1)    translateY(0); }
+}
+
+.team_card_1 {
+  animation: pop_2 1.7s;
+}
+
+.team_card_2 {
+  animation: pop_2 1.3s;
+}
+
+.team_card_3 {
+  animation: pop_2 1.5s;
+}
+
+.team_card_4 {
+  animation: pop_2 1.9s;
+}
+
+.team_card_5 {
+  animation: pop_2 1.1s;
+}
+
+
+.team_card_circle {
+  background-color: #BBB;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  filter: blur(1px);
+}
+
+.team_card_img {
+  position: relative;
+  width: 260px;
+  bottom: 30px;
+  transition: all .5s;
+}
+
+.team_card_img_bonus {
+  z-index: -5;
+  opacity:0;  
+  display: block;      
+  position: relative;
+}
+
+#anaglyph_img {
+  bottom: 17rem;
+  width: 8rem;
+}
+
+#anaglyph_txt {
+  position: relative;
+  bottom: 150px;
+}
+
+#oakley_img {
+  bottom: 17rem;
+  width: 8rem;
+}
+
+#oakley_txt {
+  position: relative;
+  bottom: 150px;
+}
+
+
+.color_1 {
+  background-color: #71be77;
+}
+
+.color_2 {
+  background-color: #f39f18;
+}
+
+.color_3 {
+  background-color: #1ca7a9;
+}
+
+.color_4 {
+  background-color: #65c9ff;
+}
+
+.color_5 {
+  background-color:  #e9383f;
+}
+
+.team_card_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 110px;
+  z-index: -5;
+  transition:  .8s;
+  opacity : 0;
+}
+
+.team_card_name {
+  font-size : 2rem;
+  font-weight: bold;
+}
+
+.team_card_role {
+  font-size : 1rem;
+  font-weight: bold;
+}
+
+.team_card_title {
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.team_card_contact {
+  width: 7rem;
+  display: flex;
+  justify-content: space-around;
+  &_ a {
+    width: 4rem;
+  }
+}
+
+.team:hover > * {
+  opacity: .3;
+  transition: .3s ease-in-out;
+}
+
+.team:hover > *:hover {
+  opacity: 1;
+}
+

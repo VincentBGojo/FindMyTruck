@@ -1,0 +1,95 @@
+@use 'src/styles/vars';
+
+.card_foodtruck {
+  display: flex;
+  width: auto;
+  height: auto;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+  // margin: .5rem 0 0 .5rem;
+  padding: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) ;
+}
+
+.card_foodtruck:hover {
+  transform: scale(1.01);
+  &_content_title {
+    color: vars.$paleblue;
+  }
+}
+
+.card_foodtruck:active {
+  transform: scale(3);
+  background-color: #fff;
+  .result_cards {
+    width: 2rem;  
+  }  
+}
+
+.card_foodtruck_img{
+  width: 5rem;
+  height:5rem;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.card_foodtruck_content{
+  // width: 75%;
+  padding: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.card_foodtruck_content_title {
+  font-size: 1.2rem;
+}
+
+.card_foodtruck_content_subtitle {
+  display: flex;
+}
+
+.card_foodtruck_content_category {
+  font-size: .8rem;
+  padding: .4rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: vars.$retropeach;
+}
+
+.card_foodtruck_content_rating svg {
+  width: 1rem;
+  color : vars.$retroyellow;
+}
+
+.card_foodtruck_content_description {
+  display: flex;
+  align-items: center;
+  & svg{
+    width: 1rem;
+    color : vars.$retroredhot;
+    margin-right: .5rem;
+  }
+}
+
+.card_foodtruck_content_description {
+  display: block;
+  color: vars.$retroredhot;
+}
+
+.card_foodtruck_content_description_adress {
+  display: flex;
+}
+
+.card_foodtruck_content_description_details {
+  display: none;
+}
+
+.card_foodtruck_content_description_adress {
+  display: block;
+}

@@ -1,0 +1,228 @@
+@use '../../styles/vars';
+
+//Search Zone
+.searchBar {
+  display: flex;
+  width: 90%;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin: 2rem auto 1rem;
+  background-color: #FFF;
+}
+
+.searchBar_button {
+    width: 3.8em;
+    height: 3.8rem;
+    cursor: pointer;
+    background-color: vars.$paleblue;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+// .searchBar_geolocate{
+//   background-color: vars.$paleblue;
+//   border: none;
+//   border-radius: .5rem;
+//   padding: 1rem;
+//   color: #FFF;
+//   &:active {
+//     background-color: vars.$paleyellow;
+//   }
+// }
+
+//Search Text Zone & Search Button
+.searchBar_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+//Search Text Zone
+.searchBar_text {
+  position: relative;
+  width: 95%;
+  margin: 0 1rem;
+  border: none;
+  padding: 1rem 1rem 13px 1rem ;
+}
+
+//Search Text Zone : text field
+.searchBar_text input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 13px;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #666;
+  border-bottom: 1px solid #666;
+}
+
+//Search Text Zone : text field *onclick effect*
+.searchBar_text input:focus {
+  border-bottom: 2px solid vars.$paleblue;
+}
+
+//Search Text Zone : placeholder
+.searchBar_text span {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  padding: 10px;
+  display: inline-block;
+  transition: 0.3s ease-in ;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #666;
+  pointer-events: none;
+  & svg {
+    position: relative;
+    bottom: -7px;
+    width: 1.2rem;
+  }
+  & .Typewriter__wrapper {
+    padding-left: 2.5rem;
+    width: 28rem;
+  }
+  & .Typewriter__cursor {
+    display: none;
+  }
+}
+
+//Search Text Zone : placeholder *onclick effect*
+.searchBar_text input:focus ~ span,
+.searchBar_text input:valid ~ span {
+  transform: translateX(-10px) translateY(-25px);
+  font-size: .8rem;
+  color: vars.$paleblue;
+  & svg {
+    transform:  translateX(-5
+    8px) translateY(1px);
+    width: .8rem;
+  }
+  & .Typewriter__wrapper {
+    transform:  translateX(-3px) translateY(1px);
+    font-size: .8rem;
+    color: vars.$paleblue;
+    padding-left: 2rem;
+    width: 28rem;
+  }
+}
+
+//Search Button Zone
+#searchBar_button button {
+    position: relative;
+    display: block;
+    width: 3.8em;
+    height: 3.8rem;
+    cursor: pointer;
+    background-color: vars.$paleblue;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    // box-shadow: 0px 5px 10px #d9d9d9;
+    // border-bottom: 2px solid #d9d9d9;
+    transition: all 0.3s;
+}
+
+//Search Button Zone : *hover effect*
+#searchBar_button button:hover {
+  // box-shadow: 0px 15px 25px -5px #d9d9d9;
+  transform: scale(1.03);
+}
+
+//Search Button Zone : *onclick effect*
+#searchBar_button button:active {
+  // box-shadow: 0px 4px 8px #d9d9d9;
+  transform: scale(0.98);
+}
+
+//Search Button Zone : Search icon substitute for mobile responsive view
+.searchBar_Icon {
+  opacity: 0;
+}
+
+//Search Button Zone : Animated Search icon : circle part 
+#searchBar_button_circle {
+  position: relative;
+  top: -0.4rem;
+  left: -.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0;
+  border-width: .3rem;
+  border: .3rem solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.4s ease all;
+}
+
+//Search Button Zone : Animated Search icon : stick part 
+#searchBar_button button span {
+  position: absolute;
+  top: 2.6rem;
+  left: 2.3rem;
+  display: block;
+  width: .5rem;
+  height: .5rem;
+  background-color: transparent;
+  border-radius: .3rem;
+  transform: rotateZ(52deg);
+  transition: 0.4s ease all;
+}
+
+//Search Button Zone : Animated Search icon : stick part (for the arrow effect)
+#searchBar_button button span:before, #searchBar_button button span:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1rem;
+  height: .25rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
+}
+
+//Search Button Zone : Animated Search icon : Arrow stick
+#searchBar_button:hover #searchBar_button_circle {
+  top: -1px;
+  width: 2rem;
+  height: .25rem;
+  border-width: 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+//Search Button Zone : Animated Search icon : Stick bacame Arrow head
+#searchBar_button:hover span {
+  top: 50%;
+  left: 13px;
+  width: 25px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+//Search Button Zone : Animated Search icon : Arrow head (top part)
+#searchBar_button:hover button span:before {
+  bottom: 3px;
+  transform: rotateZ(52deg);
+}
+
+//Search Button Zone : Animated Search icon : Arrow head (bottom part)
+#searchBar_button:hover button span:after {
+    bottom: -7px;
+    transform: rotateZ(-52deg);
+}
+
+//Search Button Zone : Animated Search icon : Arrow head
+#searchBar_button:hover button span:before, #searchBar_button:hover button span:after {
+  right: -4px;
+  width: 15px;
+  background-color: #fff;
+}
