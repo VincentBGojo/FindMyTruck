@@ -1,6 +1,9 @@
 # FIND MY TRUCK 
 
  Salut je suis un projet cool.  *(this part must stay in french)*
+ Projet de groupe réalisé intégralement en react pour la partie front, j'ai crée la quasi intégralité des composants React (mais pas la partie CSS)
+ 
+ Lien de la présentation avec timestamp: https://youtu.be/X7Indy4FB_o?t=2447
 
 ## TL;DR
 
